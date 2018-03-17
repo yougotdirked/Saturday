@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: c19d76f83947b4842bb6e6235c1c8dca
+timeCreated: 1512737560
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Belt_low
+    100002: Body_low
+    100004: Buttons_low
+    100006: Facecover_low
+    100008: Hat_low
+    100010: Pants_low
+    100012: //RootNode
+    100014: Shoedetail_low
+    100016: Shoes_low
+    100018: Suspenders_low
+    100020: Waistcloth_low
+    100022: Wrist_low
+    400000: Belt_low
+    400002: Body_low
+    400004: Buttons_low
+    400006: Facecover_low
+    400008: Hat_low
+    400010: Pants_low
+    400012: //RootNode
+    400014: Shoedetail_low
+    400016: Shoes_low
+    400018: Suspenders_low
+    400020: Waistcloth_low
+    400022: Wrist_low
+    2300000: Belt_low
+    2300002: Body_low
+    2300004: Buttons_low
+    2300006: Facecover_low
+    2300008: Hat_low
+    2300010: Pants_low
+    2300012: Shoedetail_low
+    2300014: Shoes_low
+    2300016: Suspenders_low
+    2300018: Waistcloth_low
+    2300020: Wrist_low
+    3300000: Belt_low
+    3300002: Body_low
+    3300004: Buttons_low
+    3300006: Facecover_low
+    3300008: Hat_low
+    3300010: Pants_low
+    3300012: Shoedetail_low
+    3300014: Shoes_low
+    3300016: Suspenders_low
+    3300018: Waistcloth_low
+    3300020: Wrist_low
+    4300000: Facecover_low
+    4300002: Hat_low
+    4300004: Wrist_low
+    4300006: Buttons_low
+    4300008: Suspenders_low
+    4300010: Belt_low
+    4300012: Waistcloth_low
+    4300014: Pants_low
+    4300016: Shoedetail_low
+    4300018: Shoes_low
+    4300020: Body_low
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BodyMat
+    second: {fileID: 2100000, guid: 60622189a6aea7347a00ab6ba5dccf67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrownMat
+    second: {fileID: 2100000, guid: 38a9734d6f036cc499d6460715006321, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClothMat
+    second: {fileID: 2100000, guid: b8b6ac613cb24ca40b3b971f433a9495, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: d08dc55f48a534f47b023b3b9df47b30, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 65
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1529258571332910}
+  m_IsPrefabParent: 1
+--- !u!1 &1529258571332910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4344633149433028}
+  - component: {fileID: 114272382547097446}
+  - component: {fileID: 114545875331256242}
+  m_Layer: 0
+  m_Name: Island
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4344633149433028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529258571332910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114272382547097446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529258571332910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60e45d1ac948424ab1ab307917664cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 5
+  minDistance: 5
+  distancejitter: 1
+  blockSize: 3
+  sizeJitter: 1
+  island: {fileID: 0}
+  spawnDirection: {x: 0, y: 0, z: 1}
+  directionJitter: 1
+  heightJitter: 2
+--- !u!114 &114545875331256242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529258571332910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371c750689fdd4f408d6e6b13a1d3b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 3
+  radius: 10
+  spawnRadius: 50
+  newIslandThreshhold: 5
+  nextIsland: {fileID: 1529258571332910}
+  mainBlock: {fileID: 1705131752249058, guid: 776e45c6e7f42b545956e04efc2e1f4d, type: 2}
+  islandgen: {fileID: 0}
+  body: []
+  blockIsGrowing: 0
