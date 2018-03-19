@@ -13,7 +13,8 @@ public class DynamicFocus : MonoBehaviour {
 
     [SerializeField] LayerMask mask;
     [SerializeField] float minimalDistance = .5f;
-    [SerializeField] float AdjustmentMultiplier = 30f; //use to control speed of transitioning between different fields of focus
+    [SerializeField] float forwardAdjustment = 30f; //use forward and backward adjustment to control speed of transitioning between different fields of focus
+    [SerializeField] float backwardAdjustment = 60f;
     [SerializeField] float maximumDistance = 1000f; //distance the ray travels for sampling
 
     //if the camera is focussing on something nearby, the focal length should decrease
@@ -41,6 +42,7 @@ public class DynamicFocus : MonoBehaviour {
         DepthOfFieldModel.Settings temp_DOFModel = ppp.depthOfField.settings;
         float currentDistance = ppp.depthOfField.settings.focusDistance;
         Vector3 rayOrigin = transform.position + transform.forward * minimalDistance;
+        float adjustmentMultiplier;
         
         float currentFocalDistance = ppp.depthOfField.settings.focalLength;
 
@@ -48,6 +50,12 @@ public class DynamicFocus : MonoBehaviour {
             targetDistance = hit.distance;
 
         float difference = Mathf.Abs(targetDistance - currentDistance);
+
+        if (targetDistance > currentDistance)
+            adjustmentMultiplier = forwardAdjustment;
+        else
+            adjustmentMultiplier = backwardAdjustment;
+        
 
         if (difference > 200)
         {
@@ -68,7 +76,7 @@ public class DynamicFocus : MonoBehaviour {
         }
 
         //Lerp the focus distance between the old value and the new ray distance
-        temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (Time.deltaTime / difference) * AdjustmentMultiplier);
+        temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (Time.deltaTime / difference) * adjustmentMultiplier);
 
         ppp.depthOfField.settings = temp_DOFModel;
     }

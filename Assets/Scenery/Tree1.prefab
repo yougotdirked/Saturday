@@ -1314,6 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4220943668856734}
   - component: {fileID: 114305080053781158}
+  - component: {fileID: 135130931498216182}
   m_Layer: 0
   m_Name: eyeball
   m_TagString: Untagged
@@ -2621,8 +2622,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1851219520659400}
   m_LocalRotation: {x: -0, y: -0.09282017, z: -0, w: 0.9956829}
-  m_LocalPosition: {x: 0.05373, y: 4, z: 0.03086}
-  m_LocalScale: {x: 0.0009946153, y: 1.591385, z: 0.0009946156}
+  m_LocalPosition: {x: -14.291941, y: 2.9, z: 0.112}
+  m_LocalScale: {x: 1.59138, y: 1.59139, z: 1.59139}
   m_Children:
   - {fileID: 4220943668856734}
   - {fileID: 4905183730209154}
@@ -9327,3 +9328,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf324b66a0f87344850238d2e2b7ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135130931498216182
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693996285566824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

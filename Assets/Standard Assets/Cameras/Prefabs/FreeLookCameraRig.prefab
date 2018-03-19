@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -75,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.22, z: -4.43}
+  m_LocalPosition: {x: -0, y: 0, z: -3.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -236,10 +236,8 @@ MonoBehaviour:
   minimalDistance: 0.5
   AdjustmentMultiplier: 30
   maximumDistance: 2000
-  maxFocalLength: 150
   minFocalLength: 100
-  closestFocal: 1
-  farthestFocal: 100
+  focalStrength: 2
 --- !u!114 &114321455296588426
 MonoBehaviour:
   m_ObjectHideFlags: 1
