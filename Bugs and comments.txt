@@ -1,0 +1,1 @@
+*Bij dubbel jump lijkt de camera ineens random dichtbij te focussen
