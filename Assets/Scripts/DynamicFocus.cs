@@ -12,10 +12,10 @@ public class DynamicFocus : MonoBehaviour {
     public bool smooth = true;
 
     [SerializeField] LayerMask mask;
+    [SerializeField] float maxDistance = 1000;
     [SerializeField] float minimalDistance = .5f;
-    [SerializeField] float forwardAdjustment = 30f; //use forward and backward adjustment to control speed of transitioning between different fields of focus
-    [SerializeField] float backwardAdjustment = 60f;
-    [SerializeField] float maximumDistance = 1000f; //distance the ray travels for sampling
+    [SerializeField] float forwardAdjustment = 1; //use forward and backward adjustment to control speed of transitioning between different fields of focus
+    [SerializeField] float backwardAdjustment = 2;
 
     //if the camera is focussing on something nearby, the focal length should decrease
     [SerializeField] float minFocalLength = 50;
@@ -36,8 +36,9 @@ public class DynamicFocus : MonoBehaviour {
         ppp = ppb.profile;
 	}
 	
+
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         RaycastHit hit;
         DepthOfFieldModel.Settings temp_DOFModel = ppp.depthOfField.settings;
         float currentDistance = ppp.depthOfField.settings.focusDistance;
@@ -46,21 +47,21 @@ public class DynamicFocus : MonoBehaviour {
         
         float currentFocalDistance = ppp.depthOfField.settings.focalLength;
 
-        if (Physics.Raycast(rayOrigin, transform.forward, out hit, maximumDistance))
+        if (Physics.Raycast(rayOrigin, transform.forward, out hit, 2000, mask))
+        {
             targetDistance = hit.distance;
+        }
 
-        float difference = Mathf.Abs(targetDistance - currentDistance);
-
+        //set adjustmentMultiplier to correct one:
         if (targetDistance > currentDistance)
             adjustmentMultiplier = forwardAdjustment;
         else
             adjustmentMultiplier = backwardAdjustment;
-        
 
-        if (difference > 200)
-        {
-            difference = 200;
-        }
+        //calculate difference:
+        float difference = Mathf.Abs(targetDistance - currentDistance);
+
+        difference = Mathf.Abs(targetDistance - currentDistance);
 
         //focal length adjustments:
         if(adjustFocalLength)
@@ -76,8 +77,9 @@ public class DynamicFocus : MonoBehaviour {
         }
 
         //Lerp the focus distance between the old value and the new ray distance
-        temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (Time.deltaTime / difference) * adjustmentMultiplier);
+        temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (difference * Time.deltaTime) * adjustmentMultiplier);
 
+        //set the post processing profile:
         ppp.depthOfField.settings = temp_DOFModel;
     }
 }

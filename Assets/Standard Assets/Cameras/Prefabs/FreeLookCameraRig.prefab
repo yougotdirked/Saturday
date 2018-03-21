@@ -232,10 +232,10 @@ MonoBehaviour:
   smooth: 0
   mask:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294962943
   minimalDistance: 0.5
-  AdjustmentMultiplier: 30
-  maximumDistance: 2000
+  forwardAdjustment: 1
+  backwardAdjustment: 3
   minFocalLength: 100
   focalStrength: 2
 --- !u!114 &114321455296588426

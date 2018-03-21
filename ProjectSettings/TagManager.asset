@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building Block
   - Pickup
+  - PlayerPart
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Light
   - Particles
   - Placeable
-  - 
+  - Camera
   - 
   - 
   - 
