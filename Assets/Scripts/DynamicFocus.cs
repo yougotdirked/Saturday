@@ -9,7 +9,6 @@ using UnityEngine.PostProcessing;
 
 public class DynamicFocus : MonoBehaviour {
     public bool adjustFocalLength = true;
-    public bool smooth = true;
 
     [SerializeField] LayerMask mask;
     [SerializeField] float maxDistance = 1000;
@@ -20,8 +19,6 @@ public class DynamicFocus : MonoBehaviour {
     //if the camera is focussing on something nearby, the focal length should decrease
     [SerializeField] float minFocalLength = 50;
     [SerializeField] float focalStrength = 1;
-
-    //[SerializeField] float drag; //value for smooth focus transitioning.
 
     Camera mainCam;
     PostProcessingBehaviour ppb;
@@ -44,7 +41,6 @@ public class DynamicFocus : MonoBehaviour {
         float currentDistance = ppp.depthOfField.settings.focusDistance;
         Vector3 rayOrigin = transform.position + transform.forward * minimalDistance;
         float adjustmentMultiplier;
-        
         float currentFocalDistance = ppp.depthOfField.settings.focalLength;
 
         if (Physics.Raycast(rayOrigin, transform.forward, out hit, maxDistance, mask))
@@ -69,13 +65,7 @@ public class DynamicFocus : MonoBehaviour {
             float targetFocal = minFocalLength + (focalStrength * targetDistance);
             temp_DOFModel.focalLength = Mathf.Lerp(currentFocalDistance, targetFocal, Time.deltaTime * focalStrength);
         }
-
-        //instead of focussing on the current center, make the focus point drag behind the camera:
-        if (smooth)
-        {
-            //smooth camera focus logic here
-        }
-
+        
         //Lerp the focus distance between the old value and the new ray distance
         temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (Time.deltaTime / difference) * adjustmentMultiplier);
 
