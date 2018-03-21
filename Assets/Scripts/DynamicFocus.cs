@@ -47,7 +47,7 @@ public class DynamicFocus : MonoBehaviour {
         
         float currentFocalDistance = ppp.depthOfField.settings.focalLength;
 
-        if (Physics.Raycast(rayOrigin, transform.forward, out hit, 2000, mask))
+        if (Physics.Raycast(rayOrigin, transform.forward, out hit, maxDistance, mask))
         {
             targetDistance = hit.distance;
         }
@@ -77,7 +77,7 @@ public class DynamicFocus : MonoBehaviour {
         }
 
         //Lerp the focus distance between the old value and the new ray distance
-        temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (difference * Time.deltaTime) * adjustmentMultiplier);
+        temp_DOFModel.focusDistance = Mathf.Lerp(currentDistance, targetDistance, (Time.deltaTime / difference) * adjustmentMultiplier);
 
         //set the post processing profile:
         ppp.depthOfField.settings = temp_DOFModel;
