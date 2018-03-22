@@ -350,6 +350,7 @@
     <Compile Include="Assets\PowerUp\Scripts\Utility\Singleton.cs" />
     <Compile Include="Assets\Restore\BuildingBlockOLD.cs" />
     <Compile Include="Assets\Scripts\BuildingBlock.cs" />
+    <Compile Include="Assets\Scripts\Character Scripts\Maantje\MaantjeFloat.cs" />
     <Compile Include="Assets\Scripts\Dynamic Blocks\Box.cs" />
     <Compile Include="Assets\Scripts\Dynamic Blocks\Placement\BoxPlacement.cs" />
     <Compile Include="Assets\Scripts\Dynamic Blocks\Placement\ItemPlacement.cs" />

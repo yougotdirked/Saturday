@@ -13,8 +13,8 @@ public class DynamicFocus : MonoBehaviour {
     [SerializeField] LayerMask mask;
     [SerializeField] float maxDistance = 1000;
     [SerializeField] float minimalDistance = .5f;
-    [SerializeField] float forwardAdjustment = 1; //use forward and backward adjustment to control speed of transitioning between different fields of focus
-    [SerializeField] float backwardAdjustment = 2;
+    [SerializeField] float forwardAdjustment; //use forward and backward adjustment to control speed of transitioning between different fields of focus
+    [SerializeField] float backwardAdjustment;
 
     //if the camera is focussing on something nearby, the focal length should decrease
     [SerializeField] float minFocalLength = 50;
